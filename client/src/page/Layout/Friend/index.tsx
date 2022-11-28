@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './index.less'
 import {AutoComplete, Avatar, Badge, Input, message} from 'antd'
 import {UsergroupAddOutlined, UserOutlined} from '@ant-design/icons';
-import SelectF from "@/page/Home/components/SelectF";
+import SelectF from "@/page/Layout/components/SelectF";
 import {useStore} from "@/store";
 import {$axios} from "@/utils";
 import baseUrl from "@/utils/baseUrl";

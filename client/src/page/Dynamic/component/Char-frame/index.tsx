@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Button, Input} from "antd";
 import {PictureOutlined, SmileFilled} from "@ant-design/icons"
 import './index.less'
@@ -11,7 +11,7 @@ const CharFrame: React.FC = () => {
   const [value, setValue] = useState('');
   const {userStore: {userInfo}} = useStore()
   const emoji = ['😀', '😄', '😅', '🤣', '😇', '🥰', '😚', '🤪', '😶‍', '🥵', '🤢', '🧐', '😱', '👿', '🤡', '💩', '🙈', '🤬', '✊🏼', '👀', '🐸', '🐔']
-
+  const boxRef: any = useRef(null)
   const writeArt = async (): Promise<void> => {
 
     let {code} = await $axios({
@@ -27,6 +27,14 @@ const CharFrame: React.FC = () => {
       setValue('')
     }
   }
+  const showEmoji = () => {
+    if (boxRef.current) {
+      boxRef.current.style.display === 'flex' ?
+        boxRef.current.style.display = 'none' :
+        boxRef.current.style.display = 'flex';
+    }
+  }
+
 
   return (
     <div id='charFrame'>
@@ -38,8 +46,10 @@ const CharFrame: React.FC = () => {
       />
       <div className="publish-art-box">
         <div className="use-icon">
-          <div className="emoji">
-            <div className="box">
+          <div className="emoji" onClick={() => {
+            showEmoji()
+          }}>
+            <div className="box" ref={boxRef}>
               {emoji.map((item: string, index: number) => <span key={'emoji' + index} onClick={() => {
                 setValue(value + emoji[index])
               }}>
