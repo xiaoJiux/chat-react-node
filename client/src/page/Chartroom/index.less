@@ -1,0 +1,59 @@
+.chat {
+  background-color: white;
+  border-radius: 4px;
+
+  .chatName {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    padding: 4px 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    //聊天标头颜色需要更改
+    background-color: rgba(254, 194, 4, .6);
+    //background-image: linear-gradient(135deg, #F072B6 10%, #FFF886 100%);
+  }
+
+  .chart-content {
+    background-color: white;
+    min-width: 875px;
+    padding: 10px 10px 10px 10px;
+
+    ul {
+      height: 375px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+
+  .chart-user-item {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .user-msg {
+      background-color: rgb(250, 241, 69);
+      padding: 3px 6px;
+      border-radius: 6px;
+      margin-right: 12px;
+      margin-top: 8px;
+      max-width: calc(100% - 100px);
+    }
+  }
+
+  .chart-other-item {
+    display: flex;
+
+    .user-msg {
+      background-color: rgb(229, 229, 229);
+      padding: 3px 6px;
+      border-radius: 6px;
+      margin-left: 12px;
+      margin-top: 8px;
+      max-width: calc(100% - 100px);
+    }
+  }
+
+}

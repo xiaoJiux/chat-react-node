@@ -1,0 +1,51 @@
+#myLayout {
+  .header {
+    width: clamp(1200px, 100%, 1920px);
+    //background-color: rgb(33, 33, 34);
+    background-image: linear-gradient(135deg, #FD6E6A 10%, #FFC600 100%);
+    //字体颜色
+    .ant-col {
+      color: white;
+      font-size: 24px;
+    }
+
+    .app_name {
+      font-family: "Pacifico", "serif";
+      color: white;
+      padding-left: 45px;
+    }
+
+    .ant-menu.ant-menu-dark {
+      background-color: transparent;
+    }
+
+    //悬停变色
+    .ant-menu-item:hover {
+      background-color: rgba(255, 255, 255, .3);
+    }
+
+    .ant-menu-overflow-item {
+      padding: 2px 32px;
+      margin: 3px;
+      border-radius: 6px;
+    }
+
+    //选中颜色
+    .ant-menu-item-selected {
+      background-color: rgba(255, 255, 255, .35);
+    }
+  }
+
+  .body {
+    display: flex;
+    margin: 20px;
+    align-items: flex-start;
+
+    .box {
+      margin: 0 40px;
+      width: clamp(875px, 100%, 1125px);
+    }
+  }
+
+
+}

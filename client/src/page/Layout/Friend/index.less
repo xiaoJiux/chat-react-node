@@ -1,0 +1,78 @@
+#friend {
+  background-image: linear-gradient(135deg, #FD6585 10%, #FFD3A5 100%);
+  width: 245px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  display: inline-block;
+
+  header {
+    padding: 20px 20px 0px 20px;
+    border-bottom: 2px solid #DD4A68;
+
+    .userInfo {
+      display: flex;
+
+      .ant-badge-dot {
+        width: 8px;
+        min-width: 8px;
+        height: 8px;
+      }
+
+      .name_state {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 15px;
+
+        p {
+          margin: 0;
+        }
+
+        .state {
+          color: #3de481;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .not-state {
+          color: #a92828;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .name {
+          font-size: 18px;
+          color: #333333;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .ant-select {
+      margin: 20px 10px;
+
+      .ant-input-affix-wrapper {
+        border-radius: 20px;
+        padding: 4px 10px;
+      }
+
+      .ant-input-group-addon {
+        left: 14px;
+        border-radius: 50%;
+
+        .ant-btn {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .addBtn {
+      width: 32px;
+      height: 32px;
+      background-color: white;
+      border-radius: 50%;
+      padding: 5px;
+      flex-grow: 2;
+    }
+  }
+}

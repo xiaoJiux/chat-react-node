@@ -1,0 +1,68 @@
+#charFrame {
+  & textarea:focus ~ .publish-art-box {
+    display: flex;
+  }
+
+  &:hover .publish-art-box {
+    display: flex;
+  }
+
+  .publish-art-box {
+    display: none;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    padding: 8px 6px;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .use-icon {
+      display: flex;
+
+      .anticon {
+        padding: 0 8px;
+      }
+
+      .anticon:hover svg {
+        fill: rgba(23, 139, 247);
+      }
+
+      .emoji {
+        position: relative;
+
+        .box {
+          padding: 8px 6px;
+          position: absolute;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          width: 240px;
+          height: 145px;
+          left: -30px;
+          background-color: rgba(255, 255, 255);
+          bottom: -150px;
+          z-index: 100;
+          border-radius: 8px;
+          box-shadow: 0 0 6px gray;
+
+          span {
+            margin: 0 3px;
+            height: 22px;
+            width: 22px;
+            line-height: 22px;
+            text-align: center;
+          }
+
+          span:hover {
+            cursor: pointer;
+            background-color: rgba(243, 243, 244);
+          }
+        }
+      }
+      
+
+    }
+  }
+
+
+}

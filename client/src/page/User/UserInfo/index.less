@@ -1,0 +1,98 @@
+.userInfo {
+  .userInfo-header {
+    position: relative;
+
+    .upload-tx {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .4);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .tx {
+        position: absolute;
+        padding: 0 20px;
+        bottom: 0;
+
+        .ant-upload.ant-upload-select {
+          display: none;
+        }
+      }
+
+      .tx:hover .ant-upload.ant-upload-select {
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        display: inline-block !important;
+      }
+
+      .userInfo-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        color: white;
+        padding-left: 140px;
+
+        p {
+          margin: 8px 0;
+        }
+
+        .left {
+          .username {
+            font-size: 18px;
+            font-weight: 600;
+
+            .level {
+              border: 1px solid rgba(174, 173, 173);
+              font-size: 12px;
+              margin-left: 8px;
+              padding: 0px 3px;
+              border-radius: 4px;
+              color: rgba(191, 191, 191);
+              background-color: rgba(191, 191, 191, .3);
+            }
+          }
+
+          .introduce {
+            font-size: 13px;
+          }
+        }
+
+        .right {
+          margin-right: 20px;
+
+          span {
+            border-radius: 12px;
+            border: 2px solid rgba(231, 230, 230);
+            padding: 1px 30px;
+            font-size: 13px;
+            display: inline-block;
+          }
+
+          span:nth-child(2) {
+            border: 2px solid rgba(233, 164, 4);
+            color: rgba(233, 164, 4);
+          }
+
+          span:nth-child(2):hover {
+            border: 2px solid rgba(235, 197, 77);
+          }
+
+          span:nth-child(1):hover {
+            color: rgba(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255);
+          }
+
+          .cancel {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,9 @@
+@import "./assets/css/reset.css";
+@import "./assets/css/font.css";
+@import "./assets/css/font/iconfont.css";
+
+.App {
+  background-color: rgba(234, 233, 236);
+  height: 100vh;
+  max-width: 100vw;
+}
